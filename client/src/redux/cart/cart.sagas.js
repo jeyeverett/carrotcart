@@ -2,6 +2,7 @@ import { takeLatest, all, call, put, select } from 'redux-saga/effects';
 import { selectCartItems } from './cart.selector';
 import { CartActionTypes } from './cart.types';
 import { UserActionTypes } from '../user/user.types';
+import { OrderActionTypes } from '../orders/orders.types';
 
 import { getCurrentUser, firestore } from '../../firebase/firebase.utils';
 
@@ -14,6 +15,10 @@ import {
 } from './cart.actions';
 
 export function* clearCartOnSignOut() {
+  yield put(clearCart());
+}
+
+export function* clearCartOnOrderSuccess() {
   yield put(clearCart());
 }
 
@@ -58,6 +63,13 @@ export function* onSignOutSuccess() {
   yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS, clearCartOnSignOut);
 }
 
+export function* onCreateOrderSuccess() {
+  yield takeLatest(
+    OrderActionTypes.CREATE_ORDER_SUCCESS,
+    clearCartOnOrderSuccess
+  );
+}
+
 export function* onSignInSuccess() {
   yield takeLatest(UserActionTypes.SIGN_IN_SUCCESS, fetchCartAsync);
 }
@@ -78,5 +90,6 @@ export function* cartSagas() {
     call(onSignOutSuccess),
     call(onSignInSuccess),
     call(onCartUpdate),
+    call(onCreateOrderSuccess),
   ]);
 }

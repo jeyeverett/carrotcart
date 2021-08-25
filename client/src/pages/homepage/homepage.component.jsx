@@ -9,7 +9,13 @@ const HomePage = () => {
   return (
     <HomePageContainer>
       <HomePageBackgroundImage>
-        <StyledH1>
+        <StyledH1
+          style={
+            window.innerWidth > 600
+              ? { marginBottom: '100px' }
+              : { marginBottom: '50px' }
+          }
+        >
           Sustainably grown local produce - and other natural stuff!
         </StyledH1>
         <StyledList>
