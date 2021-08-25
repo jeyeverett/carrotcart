@@ -15,7 +15,6 @@ import {
 import { withRouter } from 'react-router-dom';
 
 const OrdersPage = ({ orderData, isFetching }) => {
-  console.log(orderData);
   return isFetching ? (
     <Spinner />
   ) : (

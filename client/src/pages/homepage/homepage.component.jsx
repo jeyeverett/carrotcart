@@ -13,7 +13,7 @@ const HomePage = () => {
           style={
             window.innerWidth > 600
               ? { marginBottom: '100px' }
-              : { marginBottom: '50px' }
+              : { marginBottom: '50px', fontSize: '18px' }
           }
         >
           Sustainably grown local produce - and other natural stuff!

@@ -90,7 +90,7 @@ export const CollectionTitle = styled.h2`
 
   @media screen and (max-width: 600px) {
     font-size: ${(props) => (props.menu ? '10px' : '16px')};
-    margin: ${(props) => (props.menu ? '0px 5px' : '10px 20px')};
+    margin: ${(props) => (props.menu ? '5px 5px' : '10px 20px')};
     padding: ${(props) => (props.menu ? '5px' : '10px 20px')};
 
     width: 100%;
@@ -100,14 +100,15 @@ export const CollectionTitle = styled.h2`
 
   @media screen and (max-width: 400px) {
     font-size: ${(props) => (props.menu ? '8px' : '16px')};
-    margin: ${(props) => (props.menu ? '0px 3px' : '10px 20px')};
+    margin: ${(props) => (props.menu ? '5px 0px' : '10px 20px')};
   }
 `;
 
 export const StyledMenu = styled.nav`
-  width: min-content;
+  width: 55%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
 

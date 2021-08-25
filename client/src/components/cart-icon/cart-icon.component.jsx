@@ -16,12 +16,8 @@ import {
   ShoppingCountContainer,
 } from './cart-icon.styles';
 
-import Spinner from '../spinner/spinner.component';
-
-const CartIcon = ({ toggleCartHidden, itemCount, isCartFetching }) => {
-  return isCartFetching ? (
-    <Spinner />
-  ) : (
+const CartIcon = ({ toggleCartHidden, itemCount }) => {
+  return (
     <CartIconContainer onClick={toggleCartHidden}>
       <ShoppingIconContainer />
       <ShoppingCountContainer>{itemCount}</ShoppingCountContainer>
