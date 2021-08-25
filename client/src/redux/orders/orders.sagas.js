@@ -73,7 +73,7 @@ export function* fetchOrdersAsync() {
     if (!user) return;
 
     const userOrders = yield firestore.collection('orders').doc(user.uid).get();
-    if (!userOrders.exists) return;
+    if (!userOrders.exists) yield put(fetchOrdersSuccess(null));
 
     const { orders } = userOrders.data();
 

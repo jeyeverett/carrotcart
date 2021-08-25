@@ -15,17 +15,18 @@ import {
 import { withRouter } from 'react-router-dom';
 
 const OrdersPage = ({ orderData, isFetching }) => {
+  console.log(orderData);
   return isFetching ? (
     <Spinner />
   ) : (
     <OrderPageContainer>
       <StyledH1>Orders</StyledH1>
-      {orderData ? (
+      {orderData.orders ? (
         orderData.orders.map((order, index) => (
           <OrderItem key={index} order={order} orderNum={index} />
         ))
       ) : (
-        <NoOrders>Place an order!</NoOrders>
+        <NoOrders>No orders - place an order!</NoOrders>
       )}
     </OrderPageContainer>
   );

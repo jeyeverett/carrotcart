@@ -19,7 +19,9 @@ import {
 import Spinner from '../spinner/spinner.component';
 
 const CartIcon = ({ toggleCartHidden, itemCount, isCartFetching }) => {
-  return (
+  return isCartFetching ? (
+    <Spinner />
+  ) : (
     <CartIconContainer onClick={toggleCartHidden}>
       <ShoppingIconContainer />
       <ShoppingCountContainer>{itemCount}</ShoppingCountContainer>

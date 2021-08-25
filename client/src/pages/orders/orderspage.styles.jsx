@@ -10,8 +10,11 @@ export const OrderPageContainer = styled.section`
   }
 `;
 
-export const NoOrders = styled.span`
-  margin: auto 0;
+export const NoOrders = styled.div`
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
   font-size: 18px;
   color: white;
 `;
