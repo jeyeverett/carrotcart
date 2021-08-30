@@ -23,8 +23,8 @@ import {
 
 const Header = ({ currentUser, cartHidden, dispatch }) => (
   <HeaderContainer>
-    <LogoContainer to="/">
-      <Logo />
+    <LogoContainer to="/" aria-label="logo link to homepage">
+      <Logo alt="carrotcart logo" />
       <StyledBrand>carrotcart</StyledBrand>
     </LogoContainer>
     <OptionsContainer>
@@ -46,7 +46,6 @@ const Header = ({ currentUser, cartHidden, dispatch }) => (
   </HeaderContainer>
 );
 
-//Here we replace '(state) =>' with 'createStructuredSelector' and remove the state parameter calls from selectCurrentUser and selectCartHidden. This does the same thing but it is useful when you have many properties in mapStateToProps. createStructuredSelector will handle the passing in of state
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   cartHidden: selectCartHidden,

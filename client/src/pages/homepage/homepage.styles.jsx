@@ -18,7 +18,7 @@ export const HomePageBackgroundImage = styled.section`
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url(https://res.cloudinary.com/dnpfrwpiq/image/upload/v1629904972/carrotcart/homepage-image-1_twkmht.jpg);
+    url(https://res.cloudinary.com/dnpfrwpiq/image/upload/v1630349395/carrotcart/homepage-image-1_meqgfe.jpg);
   background-position: center;
   background-size: cover;
   padding: 20px 40px;

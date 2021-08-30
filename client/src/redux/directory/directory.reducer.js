@@ -21,14 +21,14 @@ const INITIAL_STATE = {
     {
       title: 'herb',
       imageUrl:
-        'https://res.cloudinary.com/dnpfrwpiq/image/upload/v1628702614/carrotcart/herbs/mint_qbgoqh.png',
+        'https://res.cloudinary.com/dnpfrwpiq/image/upload/v1628702615/carrotcart/herbs/thyme_n4kbzp.png',
       id: 3,
       linkUrl: 'shop/herb',
     },
     {
       title: 'floral',
       imageUrl:
-        'https://res.cloudinary.com/dnpfrwpiq/image/upload/v1628702615/carrotcart/flowers/rainbowflower_k7wivy.png',
+        'https://res.cloudinary.com/dnpfrwpiq/image/upload/q_10/v1628702615/carrotcart/flowers/rainbowflower_k7wivy.png',
       id: 4,
       linkUrl: 'shop/floral',
     },

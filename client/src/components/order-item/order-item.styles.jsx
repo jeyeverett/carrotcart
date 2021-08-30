@@ -21,7 +21,7 @@ export const OrderItemContainer = styled.p`
   justify-items: center;
   grid-template-columns: repeat(4, 1fr);
   font-size: 16px;
-  padding: 10px 0;
+  padding: 5px 0;
   color: white;
   @media screen and (max-width: 600px) {
     grid-column-gap: 2px;
