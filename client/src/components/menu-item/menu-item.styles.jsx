@@ -1,19 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const getSize = (props) => {
-  return props.size ? '380px' : '240px';
+  return props.size ? "380px" : "240px";
 };
 
 const getFlex = (props) => {
-  return props.size ? '40%' : '30%';
+  return props.size ? "40%" : "30%";
 };
 
 const getImageUrl = (props) => props.imageUrl;
 
 export const MenuItemContainer = styled.div`
-  min-width: ${getFlex};
-  height: ${getSize};
-  display: flex;
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
@@ -25,10 +22,6 @@ export const MenuItemContainer = styled.div`
 
   &:hover {
     cursor: pointer;
-  }
-
-  @media screen and (max-width: 800px) {
-    height: 200px;
   }
 `;
 
@@ -63,7 +56,7 @@ export const MenuItemContent = styled.div`
   transition: all 0.3s;
 
   .title {
-    font-family: 'Indie Flower', sans-serif;
+    font-family: "Indie Flower", sans-serif;
     font-weight: bold;
     margin: 0;
     font-size: 30px;

@@ -1,31 +1,39 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { ReactComponent as VeggieSVG } from "../../assets/vegetables.svg";
 
 export const HomePageContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px 80px;
+  margin-bottom: 10px;
   @media screen and (max-width: 700px) {
     padding: 10px;
   }
 `;
 
-export const HomePageBackgroundImage = styled.section`
-  height: 75vh;
-  width: 100%;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://res.cloudinary.com/dnpfrwpiq/image/upload/v1630349395/carrotcart/homepage-image-1_meqgfe.jpg);
-  background-position: center;
-  background-size: cover;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
-
+export const StyledTitle = styled.h1`
+  font-size: 40px;
+  color: white;
+  font-family: "Indie Flower", sans-serif;
+  text-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
   @media screen and (max-width: 600px) {
-    padding: 10px 20px;
+    font-size: 26px;
+  }
+`;
+
+export const Veg = styled(VeggieSVG)`
+  height: 400px;
+  width: 400px;
+  @media screen and (max-width: 600px) {
+    width: 300px;
+    height: 300px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 250px;
+    height: 250px;
   }
 `;
